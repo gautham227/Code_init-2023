@@ -9,7 +9,10 @@ def search(inputtext,database):
         for j in range(i+1, len(cosine_scores)):
             pairs.append({'index': [i, j], 'score': cosine_scores[i][j]})
     pairs = sorted(pairs, key=lambda x: x['score'], reverse=True)
-    for pair in pairs[0:10]:
+    for pair in pairs:
         i, j = pair['index']
-        print("{} \t\t {} \t\t Score: {:.4f}".format(sentences[i], sentences[j], pair['score']))
-    return pairs
+        result={}
+        if sentences[i] in inputtext:
+           result['match']=sentences[j]
+           result['score']=pair['score']
+        return result
