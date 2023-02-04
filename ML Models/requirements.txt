@@ -1,1 +1,1 @@
-senetence-transformers
+sentence-transformers
