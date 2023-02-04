@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lost_tags",
+  "info": {
+    "singularName": "lost-tag",
+    "pluralName": "lost-tags",
+    "displayName": "lost_tag"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lost_item": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::lost-item.lost-item"
+    },
+    "tag": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
