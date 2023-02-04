@@ -45,6 +45,12 @@
     },
     "location": {
       "type": "string"
+    },
+    "lost_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lost-tag.lost-tag",
+      "mappedBy": "lost_items"
     }
   }
 }

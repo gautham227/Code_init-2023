@@ -4,17 +4,19 @@
   "info": {
     "singularName": "lost-tag",
     "pluralName": "lost-tags",
-    "displayName": "lost_tag"
+    "displayName": "lost_tag",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "lost_item": {
+    "lost_items": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::lost-item.lost-item"
+      "relation": "manyToMany",
+      "target": "api::lost-item.lost-item",
+      "inversedBy": "lost_tags"
     },
     "tag": {
       "type": "string",

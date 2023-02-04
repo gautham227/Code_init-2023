@@ -4,17 +4,19 @@
   "info": {
     "singularName": "found-tag",
     "pluralName": "found-tags",
-    "displayName": "found_tag"
+    "displayName": "found_tag",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "found_item": {
+    "found_items": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::found-item.found-item"
+      "relation": "manyToMany",
+      "target": "api::found-item.found-item",
+      "inversedBy": "found_tags"
     },
     "tag": {
       "type": "string",

@@ -45,6 +45,12 @@
     },
     "location": {
       "type": "string"
+    },
+    "found_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::found-tag.found-tag",
+      "mappedBy": "found_items"
     }
   }
 }
