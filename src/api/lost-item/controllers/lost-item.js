@@ -13,7 +13,7 @@ module.exports = createCoreController(
       const entries = await strapi.entityService.findMany(
         "api::lost-item.lost-item",
         {
-          populate: { user: true ,lost_tags:true},
+          populate: { user: true ,lost_tags:true,image:true},
         }
       );
       return entries;

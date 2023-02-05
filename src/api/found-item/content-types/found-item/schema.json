@@ -4,7 +4,8 @@
   "info": {
     "singularName": "found-item",
     "pluralName": "found-items",
-    "displayName": "found_item"
+    "displayName": "found_item",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,21 +15,22 @@
     "user": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "admin::user"
+      "target": "plugin::users-permissions.user"
     },
     "name": {
       "type": "string",
       "required": true
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "resolved": {
       "type": "boolean",
